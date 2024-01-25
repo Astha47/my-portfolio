@@ -14,14 +14,21 @@ function Hero() {
   }
 
   const handleClick = () => {
+    let scrollHeight;
+    if (window.innerWidth < 769) {
+      scrollHeight = window.innerHeight * 1.11; // 120vh
+    } else {
+      scrollHeight = window.innerHeight - 80; // 100vh - 80px
+    }
     window.scrollTo({
-      top: window.innerHeight,
+      top: scrollHeight,
       behavior: 'smooth',
     });
   };
+  
 
   return ( 
-    <div className="Hero w-full h-fit md:h-[100vh] md:flex block md:sticky bg-gradient-to-br from-primary-dark via-black to-secondary-dark pb-12 md:pb-0 top-0 ">
+    <div className="Hero w-full h-fit md:h-[100vh] md:flex block md:sticky bg-gradient-to-br from-primary-dark via-black to-secondary-dark pb-16 md:pb-0 top-0 ">
     <div className="image h-fit w-full flex md:hidden pt-20">
       <Image 
         src="/porto-cropted.png"
