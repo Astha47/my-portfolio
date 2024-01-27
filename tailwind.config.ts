@@ -17,6 +17,9 @@ const config: Config = {
         'primary-dark': '#001719',
         'secondary-dark': '#001537',
       },
+      dropShadow: {
+        'cards': '0 0 10px rgba(179, 204, 255, 0.3)', // Ganti dengan warna dan ukuran yang Anda inginkan
+      },
       keyframes:{
         popup: {
           '0%': { opacity: '0' },
