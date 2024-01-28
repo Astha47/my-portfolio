@@ -2,7 +2,7 @@ import { NextResponse, NextRequest } from "next/server";
 import mongoose from "mongoose";
 import { dbConnect } from "@/app/lib/db";
 
-const { Projects } = require("../../../lib/schema/projects");
+const { Projects } = require("../../../lib/schema/Projects");
 
 
 export async function POST(req: NextRequest, res: NextResponse) {
