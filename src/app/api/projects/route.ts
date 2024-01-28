@@ -1,10 +1,13 @@
 import { dbConnect } from '../../lib/db'
 import { NextResponse } from 'next/server'
+const { Projects } = require("../../../lib/schema/Projects");
 
 export async function GET() {
   try {
     await dbConnect();
-    return NextResponse.json({ message: 'Successfully connected to MongoDB' });
+
+    const projectsData = await Projects.find()
+    return NextResponse.json(projectsData);
   } catch (error) {
     console.error(error);
     return NextResponse.json({ message: 'An error occurred while connecting to MongoDB' });
