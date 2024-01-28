@@ -1,6 +1,6 @@
 import { dbConnect } from '../../lib/db'
 import { NextResponse } from 'next/server'
-const { Projects } = require("../../../lib/schema/Projects");
+const { Projects } = require("../../lib/schema/Projects");
 
 export async function GET() {
   try {
