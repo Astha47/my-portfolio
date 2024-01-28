@@ -5,11 +5,9 @@ export async function GET() {
   try {
     await dbConnect();
     return NextResponse.json({ message: 'Successfully connected to MongoDB' });
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      console.error(error.message);
-    } else {
-      console.error(error);
-    }
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ message: 'An error occurred while connecting to MongoDB' });
   }
 }
+
