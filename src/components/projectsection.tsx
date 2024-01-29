@@ -17,6 +17,7 @@ interface ProjectSectionProps {
 }
 
 function ProjectSection({projects}:ProjectSectionProps) {
+  console.log(projects)
   return ( 
     <div className="cardssectioncont block w-full h-fit">
       <div className="maincont w-full h-[320px] lg:h-[320px] xl:h-[400px] flex">
