@@ -2,6 +2,8 @@ import { dbConnect } from '../../lib/db'
 import { NextResponse } from 'next/server'
 const { Projects } = require("../../lib/schema/Projects");
 
+export const dynamic = 'force-dynamic'; // Tambahkan baris ini
+
 export async function GET() {
   try {
     await dbConnect();
