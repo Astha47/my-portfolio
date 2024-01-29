@@ -27,13 +27,13 @@ function ProjectSection({projects}:ProjectSectionProps) {
           </div>
           <div className="realitem w-[calc(100%-20px)] pl-5 md:pl-0 md:w-full">
             {/* index 1 */}
-            <ProjectCard/>
+            <ProjectCard project={projects[0]}/>
           </div>
         </div>
         <div className='centerblock w-[2px] bg-[#8c869c] hidden md:block h-full'></div>
         <div className="rightblock w-[calc(50%-1px)] h-full hidden md:block">
           {/* index 2 */}
-          <ProjectCard/>
+          <ProjectCard project={projects[1]}/>
         </div>
       </div>
       <div className="secondarycont w-full h-[320px] lg:h-[320px] xl:h-[400px] md:hidden flex">
@@ -42,8 +42,8 @@ function ProjectSection({projects}:ProjectSectionProps) {
             <div className="line w-[2px] h-full m-auto bg-[#8c869c]"></div>
           </div>
           <div className="realitem w-[calc(100%-20px)] pl-5 md:w-full">
-            {/* index 1 */}
-            <ProjectCard/>
+            {/* index 2 */}
+            <ProjectCard project={projects[1]}/>
           </div>
         </div>
       </div>
