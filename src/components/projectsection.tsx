@@ -36,17 +36,20 @@ function ProjectSection({projects}:ProjectSectionProps) {
           <ProjectCard project={projects[1]}/>
         </div>
       </div>
-      <div className="secondarycont w-full h-[320px] lg:h-[320px] xl:h-[400px] md:hidden flex">
-        <div className="leftblock w-full md:w-[calc(50%-1px)] flex h-full">
-          <div className="progressbarhidden w-[20px] md:hidden flex">
-            <div className="line w-[2px] h-full m-auto bg-[#8c869c]"></div>
-          </div>
-          <div className="realitem w-[calc(100%-20px)] pl-5 md:w-full">
-            {/* index 2 */}
-            <ProjectCard project={projects[1]}/>
+
+      {projects[1] && 
+        <div className="secondarycont w-full h-[320px] lg:h-[320px] xl:h-[400px] md:hidden flex">
+          <div className="leftblock w-full md:w-[calc(50%-1px)] flex h-full">
+            <div className="progressbarhidden w-[20px] md:hidden flex">
+              <div className="line w-[2px] h-full m-auto bg-[#8c869c]"></div>
+            </div>
+            <div className="realitem w-[calc(100%-20px)] pl-5 md:w-full">
+              {/* index 2 */}
+              <ProjectCard project={projects[1]}/>
+            </div>
           </div>
         </div>
-      </div>
+      }
     </div>
    );
 }
