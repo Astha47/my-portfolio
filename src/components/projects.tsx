@@ -44,8 +44,6 @@ function Projects() {
   }, [])
   console.log(projects)
 
-
-
   return ( 
   <div className="projects w-full h-fit block">
     <h1 className="judul pb-24 w-full h-fit text-center font-semibold text-3xl md:text-4xl lg:text-5xl">
@@ -53,10 +51,14 @@ function Projects() {
     </h1>
     <div className="cardscontainer block w-full h-fit ">
 
-      <ProjectSection/>
-      <ProjectSection/>
-      <ProjectSection/>
-      <ProjectSection/>
+      {/* Bagan ProjectSection */}
+      {projects.length > 0 && projects.reduce((result: Project[][], value, index, array) => {
+        if (index % 2 === 0)
+          result.push(array.slice(index, index + 2));
+        return result;
+      }, []).map((projectPair, index) => (
+        <ProjectSection key={index} projects={projectPair} />
+      ))}
       
       <div className="endline w-full h-[100px] flex">
         <div className="leftblock w-full md:w-[calc(50%-1px)] h-full">
