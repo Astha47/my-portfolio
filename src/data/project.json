@@ -1,35 +1,14 @@
 [
     {
-        "id":"sasa",
+        "_id":"sasa",
         "title":"Asthabooks V1 Vanilla Js",
         "status":"Discontinued",
         "type":"Personal",
-        "imgurl":"sasa",
-        "desc":"saasas",
+        "imgurl":"https://res.cloudinary.com/dggk9y0yt/image/upload/v1706622422/Portofolio/v7vldqzkzz4anmeufp8c.png",
+        "desc":"Merupakan Asthabooks generasi pertama yang menggunakan vanilla js, versi ini pertama kali online pada November 2022 dan memberikan list download buku penunjang kuliah",
         "repo":"",
         "url":"",
-        "date":""
-    },
-    {
-        "id":"sasa",
-        "title":"Asthabooks V2 React Js",
-        "status":"Cancelled",
-        "type":"Personal",
-        "imgurl":"sasa",
-        "desc":"saasas",
-        "repo":"",
-        "url":"",
-        "date":""
-    },
-    {
-        "id":"sasa",
-        "title":"Asthabooks V3 Next Js",
-        "status":"On Progress",
-        "type":"Personal",
-        "imgurl":"sasa",
-        "desc":"saasas",
-        "repo":"",
-        "url":"",
-        "date":""
+        "__v":0
     }
 ]
+    

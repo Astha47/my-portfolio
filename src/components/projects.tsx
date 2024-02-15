@@ -35,12 +35,15 @@ function Projects() {
     }
   };
 
+  
+
   useEffect(() => {
     AOS.init({
          duration: 800,
          once: false,
        })
     getProjects()
+    // setProjects(dataDummy)
   }, [])
   console.log(projects)
 
