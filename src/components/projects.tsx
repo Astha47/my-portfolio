@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ProjectCard from './projectcard';
+import ProjectSectionLoad from './projectsection_load';
 import ProjectSection from './projectsection';
 import dataDummy from '../data/project.json'
 import axios from 'axios';
@@ -35,6 +35,7 @@ function Projects() {
     }
   };
 
+
   
 
   useEffect(() => {
@@ -62,6 +63,8 @@ function Projects() {
       }, []).map((projectPair, index) => (
         <ProjectSection key={index} projects={projectPair} />
       ))}
+
+      {projects.length == 0 &&<ProjectSectionLoad/>}
       
       <div className="endline w-full h-[100px] flex">
         <div className="leftblock w-full md:w-[calc(50%-1px)] h-full">
