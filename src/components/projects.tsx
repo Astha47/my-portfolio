@@ -49,7 +49,7 @@ function Projects() {
   console.log(projects)
 
   return ( 
-  <div className="projects w-full h-fit block">
+  <div className="projects w-full h-fit block p-5 sm:p-10 md:p-20 pt-28 xl:p-28">
     <h1 className="judul pb-24 w-full h-fit text-center font-semibold text-3xl md:text-4xl lg:text-5xl">
       PROJECTS
     </h1>

@@ -28,6 +28,18 @@ function ProjectCard({project}: ProjectCardProps) {
        })
   }, [])
 
+  let color = "";
+
+  if (project){
+    if (project.status === "Completed") {
+      color = "bg-green-500";
+    } else if (project.status === "Development") {
+      color = "bg-yellow-500";
+    } else if (project.status === "Discontinued" || project.status === "Canceled") {
+      color = "bg-red-500";
+    }
+  }
+
   if (project) {
     return ( 
       <div className="ProjectCard rounded-2xl md:w-[90%] lg:w-[400px] xl:w-[500px] h-[90%] overflow-hidden m-auto bg-[#161b38] cursor-pointer hover:drop-shadow-cards transition-all ease-in-out duration-200 " 
@@ -43,7 +55,7 @@ function ProjectCard({project}: ProjectCardProps) {
           <div className="attribute h-[80px] lg:h-[95px]">
             <div className="status flex h-[17px] mt-1">
               <div className="lampsection h-full aspect-square flex">
-                <div className="status w-[70%] aspect-square bg-white m-auto rounded-full"></div>
+                <div className={`status w-[70%] aspect-square m-auto rounded-full ${color}`}></div>
               </div>
               <div className="textstatus h-[12px] w-fit flex ml-1">
                 <h4 className='status text-[9pt] m-auto'>{project.status}</h4>
